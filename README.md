@@ -58,8 +58,8 @@ async def my_command(self, interaction: discord.Interaction):
     confirmed = await confirm.confirm("Are you sure you want to proceed?")
     
     if confirmed:
-        await interaction.response.send_message("Confirmed!")
+        await confirm.update("Confirmed!")
     else:
-        await interaction.response.send_message("Cancelled!")
+        await confirm.update("Cancelled!")
 ```
 

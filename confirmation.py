@@ -122,7 +122,8 @@ class BotConfirmation(Confirmation):
 
         emb = discord.Embed(description=text, color=self.color)
         if not hide_author:
-            emb.set_author(name=str(user), icon_url=user.avatar.url)
+            if user.avatar:
+                emb.set_author(name=str(user), icon_url=user.avatar.url)
 
         self._embed = emb
 
